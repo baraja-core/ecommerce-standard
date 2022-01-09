@@ -1,7 +1,7 @@
 {
-	"name": "baraja-core/template",
-	"description": "This is a template package.",
-	"homepage": "https://github.com/baraja-core/template",
+	"name": "baraja-core/ecommerce-standard",
+	"description": "Common interfaces with advance description.",
+	"homepage": "https://github.com/baraja-core/ecommerce-standard",
 	"authors": [
 		{
 			"name": "Jan Barášek",
