@@ -12,8 +12,9 @@ final class OrderCollection
 	/**
 	 * @param array<int, OrderInterface> $orders
 	 */
-	public function __construct(private array $orders)
-	{
+	public function __construct(
+		private array $orders,
+	) {
 		$this->orders = array_values($orders);
 	}
 
