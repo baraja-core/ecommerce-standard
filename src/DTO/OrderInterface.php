@@ -58,7 +58,7 @@ interface OrderInterface
 	 * Real final price for given customer or company with vat.
 	 * The price will never be negative and is always reduced by a set discount.
 	 *
-	 * @return float<0, max>
+	 * @return float
 	 */
 	public function getPrice(): float;
 
@@ -67,7 +67,7 @@ interface OrderInterface
 	 * The customer must pay this amount in the selected currency for the order to be considered paid.
 	 * The base price may be manually adjusted and may not be the sum of all items.
 	 *
-	 * @return float<0, max>
+	 * @return float
 	 */
 	public function getBasePrice(): float;
 
@@ -75,7 +75,7 @@ interface OrderInterface
 	 * The absolute value of all taxes that need to be paid for this order.
 	 * The amount is shown in the currency you have selected.
 	 *
-	 * @return float<0, max>
+	 * @return float
 	 */
 	public function getVatValue(): float;
 
@@ -88,7 +88,7 @@ interface OrderInterface
 	 * The discount is usually set manually. The discount can never be negative.
 	 * The maximum discount value is the price of the entire order.
 	 *
-	 * @return float<0, max>
+	 * @return float
 	 */
 	public function getSale(): float;
 
