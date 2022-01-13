@@ -7,5 +7,9 @@ namespace Baraja\EcommerceStandard\DTO;
 
 interface ProductVariantInterface
 {
+	public function getId(): int;
+
+	public function getProduct(): ProductInterface;
+
 	public function getLabel(): string;
 }
