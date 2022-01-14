@@ -9,7 +9,11 @@ interface CartInterface
 {
 	public function getId(): int;
 
+	public function getIdentifier(): string;
+
 	public function isEmpty(): bool;
+
+	public function isFlushed(): bool;
 
 	public function getCustomer(): ?CustomerInterface;
 
@@ -26,6 +30,14 @@ interface CartInterface
 	public function getPriceWithoutVat(): float;
 
 	public function getDeliveryBranchId(): ?int;
+
+	public function getDeliveryPrice(float $itemsPrice = 0): float;
+
+	public function getItemsPrice(bool $withVat = true): float;
+
+	public function getCurrency(): CurrencyInterface;
+
+	public function setCurrency(CurrencyInterface $currency): void;
 
 	/**
 	 * @return array<int, CartItemInterface>

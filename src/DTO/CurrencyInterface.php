@@ -17,6 +17,8 @@ interface CurrencyInterface
 	 */
 	public function renderPrice(float $price, bool $html = false): string;
 
+	public static function normalizeCode(string $code): string;
+
 	public function getCode(): string;
 
 	public function getSymbol(): string;
