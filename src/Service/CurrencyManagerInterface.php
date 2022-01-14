@@ -14,12 +14,15 @@ interface CurrencyManagerInterface
 
 	public function setMainCurrency(CurrencyInterface|string $currency): void;
 
-	public function getRateToday(CurrencyInterface|string $source, CurrencyInterface|string $target): ExchangeRateInterface;
+	public function getRateToday(
+		CurrencyInterface|string $source,
+		CurrencyInterface|string $target,
+	): ExchangeRateInterface;
 
 	public function getRate(
 		CurrencyInterface|string $source,
 		CurrencyInterface|string $target,
-		\DateTimeInterface $date
+		\DateTimeInterface $date,
 	): ExchangeRateInterface;
 
 	/**

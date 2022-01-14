@@ -20,13 +20,20 @@ interface CartManagerInterface
 
 	public function isCartFlushed(): bool;
 
-	public function buyProduct(ProductInterface $product, ?ProductVariantInterface $variant, int $count = 1): CartItemInterface;
+	public function buyProduct(
+		ProductInterface $product,
+		?ProductVariantInterface $variant,
+		int $count = 1,
+	): CartItemInterface;
 
 	public function getItemsCount(): int;
 
 	public function isFreeDelivery(CartInterface $cart): bool;
 
-	public function getFreeDeliveryMinimalPrice(?CartInterface $cart = null, ?CustomerInterface $customer = null): PriceInterface;
+	public function getFreeDeliveryMinimalPrice(
+		?CartInterface $cart = null,
+		?CustomerInterface $customer = null,
+	): PriceInterface;
 
 	public function removeCart(CartInterface $cart): void;
 }
