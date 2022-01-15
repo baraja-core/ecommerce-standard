@@ -13,7 +13,7 @@ interface DeliveryInterface
 
 	public function getDescription(): ?string;
 
-	public function getPrice(): int;
+	public function getPrice(): float;
 
 	public function getColor(): ?string;
 

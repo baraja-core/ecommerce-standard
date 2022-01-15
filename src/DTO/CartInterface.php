@@ -31,6 +31,8 @@ interface CartInterface
 
 	public function getDeliveryBranchId(): ?int;
 
+	public function setDeliveryBranchId(?int $deliveryBranchId): void;
+
 	public function getDeliveryPrice(float $itemsPrice = 0): float;
 
 	public function getItemsPrice(bool $withVat = true): float;

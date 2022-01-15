@@ -12,4 +12,6 @@ interface ProductVariantInterface
 	public function getProduct(): ProductInterface;
 
 	public function getLabel(): string;
+
+	public function getPrice(bool $useSale = true): float;
 }
