@@ -17,15 +17,18 @@ interface ProductInterface
 
 	public function getLabel(): string;
 
-	public function getPrice(): float;
+	/** @return numeric-string */
+	public function getPrice(): string;
 
-	public function getStandardPrice(): float;
+	/** @return numeric-string */
+	public function getStandardPrice(): string;
 
-	public function getSalePrice(): float;
+	/** @return numeric-string */
+	public function getSalePrice(): string;
 
 	public function isSale(): bool;
 
-	public function getStandardPricePercentage(): ?float;
+	public function getStandardPricePercentage(): ?string;
 
 	public function getPosition(): int;
 
@@ -41,7 +44,7 @@ interface ProductInterface
 
 	public function isVariantProduct(): bool;
 
-	public function getVat(): float;
+	public function getVat(): string;
 
 	public function getMaximalSize(): ?float;
 

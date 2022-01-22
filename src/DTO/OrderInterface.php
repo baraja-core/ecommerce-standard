@@ -28,6 +28,8 @@ interface OrderInterface
 
 	public function getStatus(): OrderStatusInterface;
 
+	public function getLocale(): string;
+
 	public function getInvoiceNumber(): ?string;
 
 	/**
@@ -57,42 +59,36 @@ interface OrderInterface
 	 * BasePrice - Sale
 	 * Real final price for given customer or company with vat.
 	 * The price will never be negative and is always reduced by a set discount.
-	 *
-	 * @return float
 	 */
-	public function getPrice(): float;
+	public function getPrice(): PriceInterface;
 
 	/**
 	 * The final price of all items in the order including all taxes.
 	 * The customer must pay this amount in the selected currency for the order to be considered paid.
 	 * The base price may be manually adjusted and may not be the sum of all items.
-	 *
-	 * @return float
 	 */
-	public function getBasePrice(): float;
+	public function getBasePrice(): PriceInterface;
 
 	/**
 	 * The absolute value of all taxes that need to be paid for this order.
 	 * The amount is shown in the currency you have selected.
-	 *
-	 * @return float
 	 */
-	public function getVatValue(): float;
+	public function getVatValue(): PriceInterface;
 
-	public function getPriceWithoutVat(): float;
+	public function getPriceWithoutVat(): PriceInterface;
 
-	public function setBasePrice(float $price): void;
+	public function setBasePrice(PriceInterface $price): void;
 
 	/**
 	 * The absolute value of the basic discount for the entire order.
 	 * The discount is usually set manually. The discount can never be negative.
 	 * The maximum discount value is the price of the entire order.
-	 *
-	 * @return float
 	 */
-	public function getSale(): float;
+	public function getSale(): PriceInterface;
 
-	public function setSale(float $sale): void;
+	public function setSale(PriceInterface $sale): void;
+
+	public function getCurrency(): CurrencyInterface;
 
 	/**
 	 * Returns the ISO code of the selected order currency. All prices for all items are listed in this currency.

@@ -41,11 +41,11 @@ interface OrderItemInterface
 
 	public function getLabel(): string;
 
-	public function getFinalPrice(): float;
+	public function getFinalPrice(): PriceInterface;
 
-	public function getVat(): float;
+	public function getVat(): PriceInterface;
 
-	public function getAmount(): float|int;
+	public function getAmount(): float;
 
 	public function getUnit(): string;
 

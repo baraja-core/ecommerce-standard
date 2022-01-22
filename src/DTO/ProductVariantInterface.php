@@ -13,5 +13,8 @@ interface ProductVariantInterface
 
 	public function getLabel(): string;
 
-	public function getPrice(bool $useSale = true): float;
+	/**
+	 * @return numeric-string
+	 */
+	public function getPrice(bool $useSale = true): string;
 }

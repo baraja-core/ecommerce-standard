@@ -14,8 +14,10 @@ interface CurrencyInterface
 	 * The rendering has two modes:
 	 * - regular default mode (format to plaintext)
 	 * - HTML mode (format ready to insert into HTML code including escaping)
+	 *
+	 * @param numeric-string $price
 	 */
-	public function renderPrice(float $price, bool $html = false): string;
+	public function renderPrice(string $price, bool $html = false): string;
 
 	public static function normalizeCode(string $code): string;
 
