@@ -90,14 +90,14 @@ interface OrderInterface
 
 	public function getCurrency(): CurrencyInterface;
 
+	public function setCurrency(CurrencyInterface $currency): void;
+
 	/**
 	 * Returns the ISO code of the selected order currency. All prices for all items are listed in this currency.
 	 * The order currency should never change. The calculation of the currency rates was made at the time
 	 * the specific order items were entered and does not change over time.
 	 */
 	public function getCurrencyCode(): string;
-
-	public function setCurrencyCode(CurrencyInterface $currency): void;
 
 	public function getDeliveryAddress(): ?AddressInterface;
 

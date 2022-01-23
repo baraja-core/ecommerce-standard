@@ -28,6 +28,7 @@ interface ProductInterface
 
 	public function isSale(): bool;
 
+	/** @return numeric-string|null */
 	public function getStandardPricePercentage(): ?string;
 
 	public function getPosition(): int;

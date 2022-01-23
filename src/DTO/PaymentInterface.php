@@ -9,7 +9,12 @@ interface PaymentInterface
 {
 	public function getId(): int;
 
+	public function getName(): string;
+
 	public function getCode(): string;
 
-	public function getPrice(): float;
+	/** @return numeric-string */
+	public function getPrice(): string;
+
+	public function getColor(): ?string;
 }
