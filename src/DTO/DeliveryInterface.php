@@ -9,6 +9,8 @@ interface DeliveryInterface
 {
 	public function getId(): int;
 
+	public function getLabel(): string;
+
 	public function getCode(): string;
 
 	public function getDescription(): ?string;

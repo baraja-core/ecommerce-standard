@@ -39,7 +39,11 @@ interface OrderItemInterface
 
 	public function getManufacturer(): ?ManufacturerInterface;
 
+	public function getEan(): ?string;
+
 	public function getLabel(): string;
+
+	public function getCount(): int;
 
 	public function getFinalPrice(): PriceInterface;
 

@@ -88,6 +88,10 @@ interface OrderInterface
 
 	public function setSale(PriceInterface $sale): void;
 
+	public function getDeliveryPrice(): PriceInterface;
+
+	public function getPaymentPrice(): PriceInterface;
+
 	public function getCurrency(): CurrencyInterface;
 
 	public function setCurrency(CurrencyInterface $currency): void;
@@ -103,11 +107,17 @@ interface OrderInterface
 
 	public function getPaymentAddress(): ?AddressInterface;
 
+	public function getDelivery(): ?DeliveryInterface;
+
+	public function getPayment(): ?PaymentInterface;
+
 	/**
 	 * Shipment number in the system of the selected external carrier.
 	 * More information is available according to the chosen delivery service.
 	 */
 	public function getPackageNumber(): ?string;
+
+	public function getNotice(): ?string;
 
 	/**
 	 * The date and time the order was created or entered into the system.
