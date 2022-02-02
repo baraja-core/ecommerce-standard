@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Baraja\EcommerceStandard\DTO;
 
 
+use Baraja\EcommerceStandard\Service\CartRuntimeContextInterface;
+
 interface CartInterface
 {
 	public function getId(): int;
@@ -25,17 +27,17 @@ interface CartInterface
 
 	public function setPayment(?PaymentInterface $payment): void;
 
-	public function getPrice(): float;
+	public function getPrice(): PriceInterface;
 
-	public function getPriceWithoutVat(): float;
+	public function getPriceWithoutVat(): PriceInterface;
 
 	public function getDeliveryBranchId(): ?int;
 
 	public function setDeliveryBranchId(?int $deliveryBranchId): void;
 
-	public function getDeliveryPrice(float $itemsPrice = 0): float;
+	public function getDeliveryPrice(?PriceInterface $itemsPrice = null): PriceInterface;
 
-	public function getItemsPrice(bool $withVat = true): float;
+	public function getItemsPrice(bool $withVat = true): PriceInterface;
 
 	public function getCurrency(): CurrencyInterface;
 
@@ -50,4 +52,6 @@ interface CartInterface
 	 * @return array<int, CartItemInterface>
 	 */
 	public function getItems(): array;
+
+	public function getRuntimeContext(): CartRuntimeContextInterface;
 }
