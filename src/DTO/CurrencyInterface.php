@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Baraja\EcommerceStandard\DTO;
 
 
-interface CurrencyInterface
+interface CurrencyInterface extends \Stringable
 {
 	public function getId(): int;
 
