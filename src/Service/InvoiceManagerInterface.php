@@ -7,7 +7,6 @@ namespace Baraja\EcommerceStandard\Service;
 
 use Baraja\EcommerceStandard\DTO\InvoiceInterface;
 use Baraja\EcommerceStandard\DTO\OrderInterface;
-use Baraja\Shop\Invoice\Entity\Invoice;
 
 interface InvoiceManagerInterface
 {
@@ -15,7 +14,7 @@ interface InvoiceManagerInterface
 
 	public function isInvoice(OrderInterface $order): bool;
 
-	public function getInvoicePath(Invoice $invoice): string;
+	public function getInvoicePath(InvoiceInterface $invoice): string;
 
-	public function getByOrder(OrderInterface $order): Invoice;
+	public function getByOrder(OrderInterface $order): InvoiceInterface;
 }
