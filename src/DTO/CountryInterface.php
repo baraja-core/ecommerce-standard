@@ -13,5 +13,7 @@ interface CountryInterface
 
 	public function getIsoCode(): string;
 
+	public function getCode(): string;
+
 	public function isActive(): bool;
 }

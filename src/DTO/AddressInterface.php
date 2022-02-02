@@ -13,6 +13,10 @@ interface AddressInterface extends \Stringable
 
 	public function getPersonName(): string;
 
+	public function getFirstName(): string;
+
+	public function getLastName(): string;
+
 	public function getCompanyName(): ?string;
 
 	public function getCin(): ?string;

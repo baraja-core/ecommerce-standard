@@ -47,6 +47,8 @@ interface OrderItemInterface
 
 	public function getFinalPrice(): PriceInterface;
 
+	public function setSale(PriceInterface $sale): void;
+
 	public function getVat(): PriceInterface;
 
 	public function getAmount(): float;
