@@ -45,6 +45,7 @@ interface ProductInterface
 
 	public function isVariantProduct(): bool;
 
+	/** @return numeric-string */
 	public function getVat(): string;
 
 	public function getMaximalSize(): ?float;
