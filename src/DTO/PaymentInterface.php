@@ -17,4 +17,6 @@ interface PaymentInterface
 	public function getPrice(): string;
 
 	public function getColor(): ?string;
+
+	public function getAuthorizatorKey(): ?string;
 }

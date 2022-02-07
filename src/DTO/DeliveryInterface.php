@@ -26,7 +26,5 @@ interface DeliveryInterface
 
 	public function getCarrier(): ?string;
 
-	public function getAuthorizatorKey(): ?string;
-
 	public function getCountry(): CountryInterface;
 }
