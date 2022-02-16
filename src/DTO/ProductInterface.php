@@ -67,4 +67,9 @@ interface ProductInterface
 	public function getWeight(): ?int;
 
 	public function setWeight(?int $value): void;
+
+	/**
+	 * @return array<int, CategoryInterface>
+	 */
+	public function getCategories(): array;
 }
