@@ -9,5 +9,8 @@ use Baraja\EcommerceStandard\DTO\OrderInterface;
 
 interface OrderNotificationEmailProviderInterface
 {
-	public function send(OrderInterface $order, string $subject, string $content): void;
+	/**
+	 * @param array<int, string> $attachments
+	 */
+	public function send(OrderInterface $order, string $subject, string $content, array $attachments = []): void;
 }
