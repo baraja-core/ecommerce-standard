@@ -18,6 +18,9 @@ interface DeliveryInterface
 	/** @return numeric-string */
 	public function getPrice(): string;
 
+	/** @return numeric-string|null */
+	public function getPriceCod(): ?string;
+
 	public function getColor(): ?string;
 
 	public function getBotShipper(): ?string;
