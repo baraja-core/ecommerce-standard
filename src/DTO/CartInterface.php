@@ -53,5 +53,10 @@ interface CartInterface
 	 */
 	public function getItems(): array;
 
+	/**
+	 * @return array<int, CartSaleInterface>
+	 */
+	public function getSales(): array;
+
 	public function getRuntimeContext(): CartRuntimeContextInterface;
 }
