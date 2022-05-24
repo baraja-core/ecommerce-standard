@@ -25,4 +25,6 @@ interface ProductVariantInterface
 	public function getEan(): ?string;
 
 	public function getRelationHash(): string;
+
+	public function getWarehouseAllQuantity(): int;
 }

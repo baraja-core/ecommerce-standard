@@ -72,4 +72,6 @@ interface ProductInterface
 	 * @return array<int, CategoryInterface>
 	 */
 	public function getCategories(): array;
+
+	public function getWarehouseAllQuantity(): int;
 }
