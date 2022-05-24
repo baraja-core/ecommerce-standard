@@ -26,7 +26,9 @@ interface WarehouseManagerInterface
 
 	public function createWarehouse(string $name): WarehouseInterface;
 
-	public function getWarehouseItem(ProductInterface|ProductVariantInterface|WarehouseItemInterface|string $item): WarehouseItemInterface;
+	public function getWarehouseItem(
+		ProductInterface|ProductVariantInterface|WarehouseItemInterface|string $item,
+	): WarehouseItemInterface;
 
 	public function createWarehouseItem(ProductInterface|ProductVariantInterface|string $item): WarehouseItemInterface;
 
@@ -36,9 +38,14 @@ interface WarehouseManagerInterface
 
 	public function getTotalCapacity(ProductInterface|ProductVariantInterface|WarehouseItemInterface|string $item): int;
 
-	public function getReservedCapacity(ProductInterface|ProductVariantInterface|WarehouseItemInterface|string $item): int;
+	public function getReservedCapacity(
+		ProductInterface|ProductVariantInterface|WarehouseItemInterface|string $item,
+	): int;
 
-	public function getCapacity(WarehouseItemInterface $item, ?WarehouseInterface $warehouse = null): WarehouseCapacityInterface;
+	public function getCapacity(
+		WarehouseItemInterface $item,
+		?WarehouseInterface $warehouse = null,
+	): WarehouseCapacityInterface;
 
 	public function reserveCapacity(
 		ProductInterface|ProductVariantInterface|WarehouseItemInterface|string $item,
