@@ -30,8 +30,6 @@ interface OrderInterface
 
 	public function getLocale(): string;
 
-	public function getInvoiceNumber(): ?string;
-
 	/**
 	 * A randomly generated, unique, 32 character long, secret order identifier.
 	 * The ID is used to identify the order in an external system where
