@@ -13,6 +13,8 @@ interface PaymentInterface
 
 	public function getCode(): string;
 
+	public function getDescription(): ?string;
+
 	/** @return numeric-string */
 	public function getPrice(): string;
 
