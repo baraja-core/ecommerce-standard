@@ -13,6 +13,8 @@ interface ProductTagInterface
 
 	public function setSlug(string $slug): void;
 
+	public function getLabel(): string;
+
 	public function getImageUrl(): ?string;
 
 	public function setImageUrl(?string $imageUrl): void;
