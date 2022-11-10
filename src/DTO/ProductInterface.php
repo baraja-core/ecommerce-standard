@@ -75,4 +75,8 @@ interface ProductInterface
 	public function getTags(): array;
 
 	public function getWarehouseAllQuantity(): int;
+
+	public function getManufacturer(): ?ManufacturerInterface;
+
+	public function getBrand(): ?BrandInterface;
 }
