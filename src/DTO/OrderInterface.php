@@ -117,6 +117,8 @@ interface OrderInterface
 
 	public function getNotice(): ?string;
 
+	public function getPickupCode(): ?string;
+
 	/**
 	 * The date and time the order was created or entered into the system.
 	 * Order dates must be in the same order as the order numbers.

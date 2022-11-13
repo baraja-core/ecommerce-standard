@@ -37,6 +37,8 @@ interface OrderItemInterface
 
 	public function getVariant(): ?ProductVariantInterface;
 
+	public function isRealProduct(): bool;
+
 	public function getManufacturer(): ?ManufacturerInterface;
 
 	public function getEan(): ?string;
