@@ -12,6 +12,7 @@ use Baraja\EcommerceStandard\DTO\WarehouseInterface;
 use Baraja\EcommerceStandard\DTO\WarehouseItemAvailabilityInfoInterface;
 use Baraja\EcommerceStandard\DTO\WarehouseItemInterface;
 use Baraja\EcommerceStandard\DTO\WarehouseItemReservationInterface;
+use Baraja\EcommerceStandard\DTO\WarehouseProductStatusInterface;
 
 interface WarehouseManagerInterface
 {
@@ -31,6 +32,11 @@ interface WarehouseManagerInterface
 	): WarehouseItemInterface;
 
 	public function createWarehouseItem(ProductInterface|ProductVariantInterface|string $item): WarehouseItemInterface;
+
+	public function getProductStatus(
+		ProductInterface $product,
+		?ProductVariantInterface $variant = null,
+	): WarehouseProductStatusInterface;
 
 	public function setLocation(WarehouseInterface $warehouse, ?string $location): void;
 
